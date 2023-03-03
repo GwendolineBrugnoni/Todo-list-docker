@@ -22,4 +22,4 @@ jobs:
         run: |
           DATE_WITH_TIME=$(date "+%Y%m%d-%H%M%S")
           docker build -t gwendolinebrugnoni/flask:latest -t gwendolinebrugnoni/flask:${DATE_WITH_TIME} .
-          docker push gwendolinebrugnoni/flask:latest
+          docker image push --all-tags gwendolinebrugnoni/flask
