@@ -1,0 +1,20 @@
+version: "0"
+services:
+    monapp:
+        image: flask
+        container_name: monapp
+        ports:
+            - 5000:5000
+        networks:
+            - mybridge
+    mongo-container:
+        container_name: mongo-container
+        image: mongo
+        volumes:
+            - mongo-volume:/data/db
+        networks:
+            - mybridge
+volumes:
+    mongo-volume:
+networks:
+    mybridge:
