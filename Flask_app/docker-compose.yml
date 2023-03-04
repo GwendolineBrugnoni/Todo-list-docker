@@ -1,25 +1,25 @@
 version: "0" # version du format de fichier dans Docker Compose
-services: # définition des services nécessaires à notre application
+services: # definition des services necessaires a notre application
 
     monapp: #services pour l'application flask
-        image: gwendolinebrugnoni/flask # va chercher l'image docker à utiliser pour ce service sur DockerHub
+        image: gwendolinebrugnoni/flask # va chercher l'image docker a utiliser pour ce service sur DockerHub
         container_name: monapp
-        ports: # ports exposés pour accéder à l'application flask
+        ports: # ports exposes pour acceder a l'application flask
             - 5000:5000
-        volumes: # volume monté pour stocker l'affichage de l'application
+        volumes: # volume monte pour stocker l'affichage de l'application
             - ./templates/index.html:/templates/index.html
-        networks: # réseau utilisé par l'app
+        networks: # reseau utilise par l'app
             - mybridge
 
-    mongo-container: #services pour la base de données mongo 
+    mongo-container: #services pour la base de donnees mongo 
         container_name: mongo-container
         image: mongo # va chercher l'image docker mongo sur DockerHub
-        volumes: # volumes utilisés pour stocker les données de la base de données
+        volumes: # volumes utilises pour stocker les donnees de la base de donnees
             - mongo-volume:/data/db
-        networks: # réseau utilisé par l'app
+        networks: # reseau utilise par l'app
             - mybridge
 
-# création des volumes et networks utilisés ci-dessus
+# creation des volumes et networks utilises ci-dessus
 volumes:
     mongo-volume:
 networks:
