@@ -21,6 +21,3 @@ docker-compose up
 
 Les images utilisées (mongo et gwendolinebrugnoni/flask) sont sur dockerhub. Il n'est donc pas nécessaire de build une image. De plus un workflow est associé à ce projet qui fais
 que l'image de l'applications flask est mise à jours dès que quelqu'un push sur la branch main.
-
-        volumes:
-            - ./templates/index.html:/templates/index.html
