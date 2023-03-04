@@ -2,9 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect
 from pymongo import MongoClient
 
 app = Flask(__name__)
-app.config.update(
-    TEMPLATES_AUTO_RELOAD=True
-)
+app.config['TEMPLATES_AUTO_RELOAD'] = True
 
 client = MongoClient("mongodb://mongo-container:27017")
 
