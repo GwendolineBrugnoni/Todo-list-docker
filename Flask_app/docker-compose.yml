@@ -1,10 +1,12 @@
 version: "0"
 services:
     monapp:
-        image: flask
+        image: gwendolinebrugnoni/flask
         container_name: monapp
         ports:
             - 5000:5000
+        volumes:
+            - ./templates/index.html:/templates/index.html
         networks:
             - mybridge
     mongo-container:
