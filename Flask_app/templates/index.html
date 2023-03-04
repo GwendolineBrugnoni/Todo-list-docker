@@ -1,8 +1,8 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>FlaskApp</title>
+    <title>MALWARES LIST</title>
     <style>
         .todo {
             padding: 20px;
@@ -12,41 +12,41 @@
     </style>
 </head>
 <body>
-    <h1>FlaskTODO</h1>
+    <h1>MALWARES LIST</h1>
     <hr>
     <div class="content">
-    <form method="post">
-        <p>
-            <b><label for="content">Todo content</label></b>
-        </p>
-        <p>
-            <input type="text" name="content"
-                placeholder="Todo Content"></input>
-        </p>
+        <form method="post">
+            <p>
+                <b><label for="content">Malicious code names</label></b>
+            </p>
+            <p>
+                <input type="text" name="content"
+                       placeholder="Malicious code "></input>
+            </p>
 
-        <p>
-            <b><label for="degree">Degree</label></b>
-        </p>
-        <p>
-            <input id="degree-0" name="degree" required type="radio" value="Important">
-            <label for="degree-0">YO</label>
-        </p>
-        <p>
-            <input id="degree-1" name="degree" required type="radio" value="Unimportant">
-            <label for="degree-1">Unimportant</label>
-        </p>
-        <p>
-            <input id="degree-2" name="degree" required type="radio" value="Virus">
-            <label for="degree-2">coucou</label>
-        </p>
-        <button type="submit">Submit</button>
-    </form>
+            <p>
+                <b><label for="degree">Categories</label></b>
+            </p>
+            <p>
+                <input id="degree-0" name="degree" required type="radio" value="Virus">
+                <label for="degree-0">Virus</label>
+            </p>
+            <p>
+                <input id="degree-1" name="degree" required type="radio" value="Worm">
+                <label for="degree-1">Worm</label>
+            </p>
+            <p>
+                <input id="degree-2" name="degree" required type="radio" value="Memory Based">
+                <label for="degree-2">Memory Based</label>
+            </p>
+            <button type="submit">Add</button>
+        </form>
         <hr>
-    {% for todo in todos %}
+        {% for todo in todos %}
         <div class="todo">
             <p>{{ todo['content'] }} <i>({{ todo['degree']}})</i></p>
         </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 </body>
 </html>
